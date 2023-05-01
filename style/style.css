@@ -96,6 +96,15 @@ body {
   left: 20px;
 }
 
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
 /*  Huvudsida */
 #hero {
   background-image: url("../img/hero4.png");
@@ -182,7 +191,7 @@ body {
 #product1 {
   text-align: center;
 }
-#product1 .pro-container{
+#product1 .pro-container {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
@@ -234,7 +243,7 @@ body {
   color: #4c6b5b;
 }
 
-#product1 .pro .cart{
+#product1 .pro .cart {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -249,51 +258,138 @@ body {
 
 /* Footer */
 
-footer{
+footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-footer .col{  
+footer .col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
 }
 
-footer .logo{
+footer .logo {
   margin-bottom: 30px;
 }
 
-footer h4{
+footer h4 {
   font-size: 14px;
   padding-bottom: 20px;
-
 }
-footer p{
+footer p {
   font-size: 13px;
-  margin:  0 0 8px 0;
-
+  margin: 0 0 8px 0;
 }
 
-footer a{
- font-size: 13px;
- text-decoration: none;
- color: #222;
- margin-bottom: 10px;
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
 }
 
-footer .follow{
+footer .follow {
   margin-top: 20px;
 }
-footer .follow i{
+footer .follow i {
   color: #4c6b5b;
   padding-right: 4px;
   cursor: pointer;
 }
 
-footer .install .row img{
-border: 1px solid;
-border-radius: 6px;
+footer .install .row img {
+  border: 1px solid;
+  border-radius: 6px;
 }
 
+footer .install img {
+  margin: 10px 0 15px;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: lightgreen;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsivitet */
+
+@media (max-width: 799px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+
+  #pc-bag {
+    display: none;
+  }
+
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+
+  #feature {
+    justify-content: center;
+  }
+
+  #feature .fe-box {
+    margin: 15px 15px;
+  }
+
+  #product1 .pro-container {
+    justify-content: center;
+  }
+
+  #product1 .pro {
+    margin: 15px;
+  }
+}
