@@ -306,6 +306,7 @@ footer .install .row img {
 
 footer .install img {
   margin: 10px 0 15px;
+  cursor: pointer;
 }
 
 footer .follow i:hover,
